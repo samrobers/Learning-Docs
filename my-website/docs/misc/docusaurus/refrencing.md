@@ -1,3 +1,7 @@
+---
+title: Links/Imports
+---
+
 I am referencing a [document](doc2.md).
 
 Reference to another [document in a subfolder](subfolder/doc3.md).
