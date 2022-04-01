@@ -1,42 +1,20 @@
-
-Schema.prisma
-
-```
-  datasource db {
-  provider = "postgresql"
-  url      = env("DATABASE_URL")
-}
-```
-
-- specify the correct Db
-- change the Db url to the correct URl
-
-in the .env
-
-```
-
-DATABASE_URL="postgresql://johndoe:randompassword@localhost:5432/mydb?schema=public"
-
-```
-
-Here's a short explanation of each component:
-
-USER: The name of your database user
-PASSWORD: The password for your database user
-HOST: The name of your host name (for the local environment, it is localhost)
-PORT: The port where your database server is running (typically 5432 for PostgreSQL)
-DATABASE: The name of the database
-SCHEMA: The name of the schema inside the database
-
-When running PostgreSQL locally on Mac OS, your user and password as well as the database name typically correspond to the current user of your OS, e.g. assuming the user is called janedoe:
-
-npx prisma migrate
-
-npm install @prisma/client
-
 querying the DB
 
+:::important
+
+make sure you have your import statements
+
 ```
+import { PrismaClient } from '@prisma/client'
+
+const prisma = new PrismaClient()
+
+```
+
+:::
+
+```
+setting up your first call
 
 import { PrismaClient } from '@prisma/client'
 
